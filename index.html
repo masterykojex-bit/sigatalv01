@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>SIGATAL - Silsilah Keluarga Digital</title>
+  
+  <!-- Menggunakan Favicon Kemnaker sesuai kode .gs Anda -->
+  <link rel="icon" href="https://png.pngtree.com/png-clipart/20221224/original/pngtree-family-tree-genealogy-members-png-image_8803776.png" />
+  
+  <style>
+    /* Menghilangkan scrollbar pada body agar tampilan bersih */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+
+    /* Container untuk memastikan iframe memenuhi layar penuh secara responsif */
+    .iframe-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="iframe-container">
+    <iframe
+      id="app-frame"
+      src="https://script.google.com/macros/s/AKfycbxsgtfW_hFwz6ql4n0rH_s4lkUpIBOSsToK67hJ4YrskAmFGo5H8B8mMBQeHZwd6EPB/exec"
+      allow="geolocation; microphone; camera">
+    </iframe>
+  </div>
+
+  <script>
+    // Opsional: Memastikan iframe tetap penuh jika ada perubahan ukuran layar ponsel
+    window.addEventListener('resize', function() {
+      document.getElementById('app-frame').style.height = window.innerHeight + 'px';
+    });
+  </script>
+</body>
+</html>
